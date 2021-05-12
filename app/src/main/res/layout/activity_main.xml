@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/custom">
+
+    <TextView
+        android:id="@+id/Clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="122dp"
+        android:text="00:00"
+        android:textSize="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SoftBoiled" />
+
+        <Button
+        android:id="@+id/StartClock"
+        android:layout_width="324dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="116dp"
+        android:enabled="false"
+        android:onClick="onButtonStartTime"
+        android:text="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/roundbutton"
+        />
+
+   <!-- <Button
+        android:id="@+id/StartClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_weight="1"
+        android:background="@drawable/roundbutton"
+        android:enabled="false"
+        android:text="Start" /> -->
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginLeft="117dp"
+        android:layout_marginTop="16dp"
+        android:text="vælg et æg"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/SoftBoiled"
+        android:layout_width="125dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:background="@color/custom2"
+        android:onClick="onButtonEggSelectedClicked"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/ic_soft"
+        android:contentDescription="TODO" />
+
+    <ImageButton
+        android:id="@+id/Smiling"
+        android:layout_width="125dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:background="@color/custom2"
+        android:onClick="onButtonEggSelectedClicked"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/SoftBoiled"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/ic_medium" />
+
+    <ImageButton
+        android:id="@+id/HardBoiled"
+        android:layout_width="125dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:background="@color/custom2"
+        android:onClick="onButtonEggSelectedClicked"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/Smiling"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/ic_hard" />
+</androidx.constraintlayout.widget.ConstraintLayout>
